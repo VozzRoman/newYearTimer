@@ -1,5 +1,5 @@
 body {
-  background-color: #2a3c49;
+  background-color: #ff7745;
   color: #fff;
   font-size: 16px;
   text-align: center;
@@ -7,30 +7,32 @@ body {
 }
 
 .clock {
-  display: block;
-  margin: 0 auto;
-  max-width: 80%;
+  display: flex;
+  justify-content: center;
 }
 
 .clock div {
   background-color: rgba(255, 255, 255, 0.25);
   color: #fff;
-  display: inline-block;
-  padding: 2rem;
-  margin: 0 1rem;
-  font-size: 2.5rem;
-  width: calc(10% - 2rem);
-  text-align: center;
-  font-weight: bold;
-  border-radius: 5%;
+  font-size: 70px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 87px;
+  padding: 20px;
+  border-radius: 8px;
+}
+.clock div:not(:last-child) {
+  margin-right: 20px;
 }
 
 .clock div[data-value*=days]:after,
 .clock div[data-value*=hours]:after,
 .clock div[data-value*=minutes]:after,
 .clock div[data-value*=seconds]:after {
+  content: "";
   display: block;
-  font-size: 0.75rem;
+  font-size: 20px;
   margin-top: 0.25rem;
   font-weight: 300;
 }
@@ -59,7 +61,6 @@ body {
     width: calc(15% - 2rem);
   }
 }
-
 @media screen and (max-width: 767px) {
   .clock {
     max-width: 100%;
@@ -71,10 +72,9 @@ body {
     font-size: 1rem;
   }
   .clock div[data-value*=days]:after,
-  .clock div[data-value*=hours]:after,
-  .clock div[data-value*=minutes]:after,
-  .clock div[data-value*=seconds]:after {
-    font-size: 0.5rem;
+.clock div[data-value*=hours]:after,
+.clock div[data-value*=minutes]:after,
+.clock div[data-value*=seconds]:after {
+    font-size: 0.6rem;
   }
 }
-/*# sourceMappingURL=index.css.map */
